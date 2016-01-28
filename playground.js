@@ -14,6 +14,25 @@
 // Instructions
 // Modify function multiplyAll so that it multiplies the product variable by each number in the sub-arrays of arr
 
-(function() {
-  console.log("Hey IIFE");
-})();
+// (function multiplyAll(arr) {
+//   console.log("Hey IIFE");
+//   var product = 1;
+//
+//   return product;
+// }
+//
+// multiplyAll([[1,2],[3,4],[5,6]]);
+// )();
+
+function multiplyAll(arr) {
+  var product = 1;
+  for (var x=0; x<arr.length; x++){
+    for (var y=0; y<arr[x].length; y++){
+      product *= arr[x][y];
+    }
+  }
+  return product;
+}
+
+// Modify values below to test your code
+console.log(multiplyAll([[1,2],[3,4],[5,6,7]]));
