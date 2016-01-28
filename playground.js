@@ -25,6 +25,10 @@ for (var i = 10; i > 0; i -= 2) {
 // Setup
 var myArray = [];
 
+for (var x=10; x>0; x--) {
+  if (x%2 !== 0)
+    myArray.push(x);
+}
 // Only change code below this line.
 (function() {
   console.log("Hey IIFE");
