@@ -42,7 +42,17 @@ var contacts = [
 
 function lookUp(firstName, prop){
 // Only change code below this line
+  for(var i = 0; i<contacts.length; i++) {
+    if (contacts[i].firstName === firstName) {
+      for (var j = 0; j<Object.keys(contacts[i]).length; j++) {
+        if (Object.keys(contacts[i])[j] === prop)
+          return contacts[i][prop];
+      }
+      return "No such property";
 
+    }
+  }
+  return "No such contact";
 // Only change code above this line
 }
 
